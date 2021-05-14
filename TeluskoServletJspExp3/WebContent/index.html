@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Servlet Config & Servlet Context.</p>
+	<a href="AnotherServlet">Servlet Config: data for only one servlet</a>
+	<br />
+	<a href="MyServlet">Servlet Context: Common data for all servlets</a>
+
+	<br>
+	<br>
+	<p>-Instead of Writing servlet & servletmapping in xml we can
+		simply use @WebServlet("name")</p>
+	<br>
+	<p>Jsp Page.</p>
+	<a href="myJsp.jsp">Jsp Link</a>
+	<p>Servlet can also do the same thing but the problem is we have to
+		put everyting in printwrite object. so as we have lot of tags its
+		confusing. so we created jsp. jsp has request,response,printwriter
+		objects by default so no need to declare them again.</p>
+	<p>if you want to write any java code in jsp write inside this tag
+		<% %></p>
+	<img alt="picnotFound" src="jspTags.png" height="500" width="900">
+	<p>Three <%@ %> tags in jsp. page, include, taglib</p>
+	<p>page directive is used to import packages. it also contains
+		erroepage, session etc</p>
+	<p>Include is used for including another jsp in this jsp</p>
+	<p>
+		Taglib is used for custom tags which are not available with us. For
+		that we need to use
+		<fx:h1> where fx is prefix and it also has uri atrribute
+	
+	
+	
+	</p>
+</body>
+</html>

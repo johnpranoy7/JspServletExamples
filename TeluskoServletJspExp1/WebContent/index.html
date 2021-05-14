@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	Hello World!
+<p>	You can Either Override a Service method or doGet,doPost Method. 
+     	The reason for writing in doPost instead of service is because on clients end 
+		we can change the method(get/post) from Inspect(ctrl+shft+i) in browser and get our required method say get where data is exposed in url. 
+		so we can limit such things using doGet,  doPost methods where we are allowing only the corresponding methods. We can use <b> Dispatcher Servlet</b> if both servlet are in same
+		website. If you are dealing with one servlet on our website and the other on diffrent website like payment gateway
+		then go fpr <b>sendRedirect</b>.
+		
+		Remember that in dispatcherServlet we use same req,res. But thats not the case in sendRedirect. So thats where session management
+		comes in handy
+		
+		//Sending Data to next Servlet
+		request.setAttribute("k", k);
+		
+		/*Can redirect from one servlet to other using 2 ways. 
+		 * Request Dispatcher and SendRedirect
+		 * Here wer using Request dispatcher*/
+		RequestDispatcher rd = request.getRequestDispatcher("sqr");
+		rd.forward(request, response);</p>
+	<form action="add" method="post">  			<!-- Default is Get Method -->
+		<input type="text" placeholder="Input1" name="Inp1">
+		<input type="text" placeholder="Input2" name="Inp2">
+		<button type="submit">Add</button>
+	</form>
+</body>
+</html>
